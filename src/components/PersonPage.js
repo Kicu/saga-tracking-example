@@ -15,40 +15,57 @@ class PersonPage extends Component {
     }
 
     return (
-      <div>
-        <div>
-          <span>Name:</span>
-          {this.props.person.name}
+      <article className="person-page message is-medium">
+        <div className="message-header">
+          <p>{this.props.person.name}</p>
         </div>
-        <div>
-          <span>Height: </span>
-          {this.props.person.height}
-        </div>
-        <div>
-          <span>Weight: </span>
-          {this.props.person.mass}
-        </div>
-        <div>
-          <span>Hair color: </span>
-          {this.props.person.hair_color}
-        </div>
-        <div>
-          <span>Skin color: </span>
-          {this.props.person.skin_color}
-        </div>
-        <div>
-          <span>Eye color: </span>
-          {this.props.person.eye_color}
-        </div>
-        <div>
-          <span>Year of birth: </span>
-          {this.props.person.birth_year}
-        </div>
-        <div>
-          <span>Gender: </span>
-          {this.props.person.gender}
-        </div>
-      </div>
+        <table className="table is-striped is-fullwidth is-hoverable">
+          <tbody>
+            <tr>
+              <td>Height</td>
+              <td>
+                <strong>{this.props.person.height}</strong>
+              </td>
+            </tr>
+            <tr>
+              <td>Weight</td>
+              <td>
+                <strong>{this.props.person.mass}</strong>
+              </td>
+            </tr>
+            <tr>
+              <td>Hair color</td>
+              <td>
+                <strong>{this.props.person.hair_color}</strong>
+              </td>
+            </tr>
+            <tr>
+              <td>Skin color</td>
+              <td>
+                <strong>{this.props.person.skin_color}</strong>
+              </td>
+            </tr>
+            <tr>
+              <td>Eye color</td>
+              <td>
+                <strong>{this.props.person.eye_color}</strong>
+              </td>
+            </tr>
+            <tr>
+              <td>Year of birth</td>
+              <td>
+                <strong>{this.props.person.birth_year}</strong>
+              </td>
+            </tr>
+            <tr>
+              <td>Gender</td>
+              <td>
+                <strong>{this.props.person.gender}</strong>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
     );
   }
 }

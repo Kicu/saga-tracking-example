@@ -12,13 +12,19 @@ class ListPage extends Component {
 
   render() {
     return (
-      <ul>
-        {this.props.people.map(p => (
-          <li key={p.id}>
-            <Link to={`/person/${p.id}`}>{p.name}</Link>
-          </li>
-        ))}
-      </ul>
+      <div className="people-list">
+        <div className="panel is-size-5">
+          <p className="panel-heading">Characters</p>
+          {this.props.people.map(p => (
+            <Link key={p.id} className="panel-block" to={`/person/${p.id}`}>
+              <span className="panel-icon">
+                <i className="fas fa-user" aria-hidden="true" />
+              </span>
+              {p.name}
+            </Link>
+          ))}
+        </div>
+      </div>
     );
   }
 }
